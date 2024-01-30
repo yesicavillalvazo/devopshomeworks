@@ -12,7 +12,7 @@ RUN bash -c "wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/inst
     nvm install 18.13 && nvm use 18.13
 
 # install angular CLI
-RUN npm install -g @angular/cli@latest
+RUN npm install -g @angular/cli
 
 
 RUN ng build --optimization=false
