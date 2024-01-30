@@ -13,7 +13,7 @@ RUN npm install -g @angular/cli@latest
 
 COPY . .
 RUN npm install
-RUN ng build --optimization=false
+RUN ng build 
 # small hack - node doesn't persist in destination of a COPY
 RUN BACKGROUND ng serve --host 0.0.0.0 --disable-host-check
 EXPOSE WEBSITE http://localhost:4200
