@@ -22,5 +22,5 @@ RUN bash -c "wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/inst
 
 
 # small hack - node doesn't persist in destination of a COPY
-RUN BACKGROUND ng serve --host 0.0.0.0 --disable-host-check
+RUN BACKGROUND ng serve 
 EXPOSE WEBSITE http://localhost:4200
