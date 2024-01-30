@@ -24,8 +24,6 @@ RUN ng build --prod
 # Install a simple web server to serve your app (you can choose any server you prefer)
 RUN npm install -g http-server
 
-# When the environment spins up, serve your Angular application
-CMD http-server ./dist/catalogo -p 8080
 # Expose the port your app runs on (adjust if you use a different port)
 EXPOSE WEBSITE http://localhost:4200
 
