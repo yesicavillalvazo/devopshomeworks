@@ -19,8 +19,9 @@ RUN bash -c "wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/inst
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" && \
     nvm install 18.13 && nvm use 18.13
 
-
+# Expose port 4200
+EXPOSE 4200
 
 # small hack - node doesn't persist in destination of a COPY
-RUN BACKGROUND ng serve 
+RUN BACKGROUND ng serve --host 0.0.0.0 --disable-host-check
 EXPOSE WEBSITE http://localhost:4200
