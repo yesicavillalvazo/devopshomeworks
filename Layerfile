@@ -4,8 +4,7 @@ FROM vm/ubuntu:18.04
 # To note: Layerfiles create entire VMs, *not* containers!
 
 # install node 10
-RUN curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-sudo apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash - sudo apt-get install -y nodejs
 
 # install angular CLI
 RUN npm install -g @angular/cli@latest
